@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>learningIA — Unidad 3: Modelos Ocultos de Markov</title>
+<meta name="description" content="Material de estudio interactivo para la Unidad 3 de Bioinformática UNAJ: Laboratorio HMM y el juego ¿Quién Sabe HMM?">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg0:#02030f; --bg1:#060a2e; --bg2:#0b1250;
+  --panel:rgba(10,14,46,.86); --border:rgba(255,205,70,.35);
+  --fg:#eef3ff; --fg-muted:#9fb0e8; --gold:#ffd24d; --gold-deep:#f0a500; --gold-ink:#241700;
+  --accent:#27e4ff;
+  --font-display:'Orbitron',system-ui,sans-serif; --font-body:'Rajdhani',Inter,system-ui,sans-serif;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){ --bg0:#eef1ff; --bg1:#dde3fb; --bg2:#c9d2f7; --panel:rgba(255,255,255,.9); --border:rgba(176,122,0,.35); --fg:#101433; --fg-muted:#3c4584; --gold:#b07a00; --gold-deep:#8a5f00; --gold-ink:#fff8e4; color-scheme:light; }
+}
+:root[data-theme="light"]{ --bg0:#eef1ff; --bg1:#dde3fb; --bg2:#c9d2f7; --panel:rgba(255,255,255,.9); --border:rgba(176,122,0,.35); --fg:#101433; --fg-muted:#3c4584; --gold:#b07a00; --gold-deep:#8a5f00; --gold-ink:#fff8e4; color-scheme:light; }
+*{box-sizing:border-box}
+body{margin:0;min-height:100dvh;color:var(--fg);font-family:var(--font-body);
+  background:radial-gradient(ellipse 1100px 650px at 50% -10%, rgba(255,210,77,.12), transparent 60%),
+             linear-gradient(180deg,var(--bg0),var(--bg1) 55%,var(--bg2));
+  display:flex;align-items:center;justify-content:center;padding:24px;
+  padding-top:max(24px,env(safe-area-inset-top,0px)); padding-bottom:max(24px,env(safe-area-inset-bottom,0px));
+}
+.hub{max-width:760px;width:100%;text-align:center}
+.hub h1{font-family:var(--font-display);font-size:clamp(24px,5vw,38px);letter-spacing:.5px;
+  background:linear-gradient(180deg,#fff4d0,var(--gold) 60%,var(--gold-deep));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+.hub .sub{color:var(--fg-muted);font-size:14px;margin-bottom:34px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:620px){.cards{grid-template-columns:1fr}}
+.card{display:block;text-decoration:none;color:var(--fg);background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:26px 20px;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.card .ic{font-size:34px;margin-bottom:10px}
+.card h2{font-family:var(--font-display);font-size:15px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px;color:var(--gold)}
+.card p{font-size:13px;color:var(--fg-muted);line-height:1.55;margin:0}
+footer{margin-top:34px;font-size:11px;color:var(--fg-muted);opacity:.7}
+</style>
+</head>
+<body>
+<div class="hub">
+  <h1>learningIA</h1>
+  <p class="sub">Unidad 3 — Modelos Ocultos de Markov · Bioinformática, Ing. Informática, UNAJ</p>
+  <div class="cards">
+    <a class="card" href="laboratorio-hmm.html">
+      <div class="ic">🔬</div>
+      <h2>Laboratorio HMM</h2>
+      <p>Cada subtema con su cita textual, explicación, diagramas y pregunta. Progreso automático al responder, quiz general por tema y glosario con tooltips.</p>
+    </a>
+    <a class="card" href="millonario-hmm.html">
+      <div class="ic">🎮</div>
+      <h2>¿Quién Sabe HMM?</h2>
+      <p>El mismo contenido en formato de juego de preguntas y respuestas: 15 niveles, comodines, pisos seguros y sonido — para repasar jugando.</p>
+    </a>
+  </div>
+  <footer>Basado en Clase 9 y Clase 10, H. Ariel Álvarez — Bioinformática, UNAJ 2026</footer>
+</div>
+</body>
+</html>
